@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PAYE Calculator</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js"></script> 
+    </head>
+    <body>
+        <div id="topbar">
+            <div></div>
+            <div><h1>PAYE Calculator</h1></div>
+            <div>
+            </div>
+        </div>
+
+        <div id="navbar">
+            <div id="item" style="text-align: center; font-family: 'Courier New', Courier, monospace;"><a href="https://damienhunter.com/" target="_blank"><b>Damien Hunter</b></a></div>
+            <div id="item" style="text-align: center; font-family: 'Courier New', Courier, monospace;"><a href="https://www.linkedin.com/in/damien-hunter/" target="_blank"><b>LinkedIn</b></a></div>
+            <div id="item" style="text-align: center; font-family: 'Courier New', Courier, monospace;"><a href="https://github.com/damienhunter30" target="_blank"><b>Github</b></a></div>
+        </div>
+
+        <div id="mainbar">
+            <div>
+                <h3>
+                    Net Salary Calculator
+                </h3>
+                <p>
+                    The net salary calculator is a tool developed for PAYE workers in Ireland. Calculations are
+                    dependent on the users marital status and age.
+                </p>
+            </div>
+            <div id="boxA">
+                <h1>Net Salary Calculator</h1>
+                <form onsubmit="return false">
+                    <input type="text" id="annual" class="box" style="width: 200px; height: 20px;" placeholder="Annual Salary"><br><br>
+                    <input type="text" id="paye" class="box" style="width: 200px; height: 20px;" placeholder="PAYE..."><br><br>
+                    <input type="text" id="prsi" class="box" style="width: 200px; height: 20px;" placeholder="PRSI..."><br><br>
+                    <input type="text" id="usc" class="box" style="width: 200px; height: 20px;" placeholder="USC..."><br><br>
+                    <input type="text" id="payable" class="box" style="width: 200px; height: 20px;" placeholder="Tax Payable..."><br><br>
+                    <input type="text" id="net" class="box" style="width: 200px; height: 20px;" placeholder="Net Salary"><br><br>
+
+                    <input type="radio" id="married" name="button" value="married">
+                    <label id="mar" for="married">Married</label>
+                    <input type="radio" id="single" name="button" value="single">
+                    <label id="sig" for="single">Single</label>
+                    <input type="checkbox" id="over" value="Over 70">
+                    <label id="overbox" for="over">Over 70?</label><br><br>
+
+                    <button id="buttons" class="box" onclick="return calculate()">Submit</button>
+                    <button id="buttons" class="box" onclick="return clearFields()">Clear</button><br><br>
+                </form>
+            </div>
+            <div>
+                <h3>
+                    Budget 2021
+                </h3>
+                <p>
+                    I developed the PAYE Calculator web application, as a test of new skills I've picked up
+                    recenetly. I will be continuing with Node JS in time, to have a full functioning web
+                    application.
+
+                    The figures generated, are based on tax and usc rates which can be found at 
+                    <a href="https://www.revenue.ie/" target="_blank"><b>Revenue</b></a>
+                </p>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div></div>
+            <div><h3>Damien Hunter</h3></div>
+            <div></div>
+    </footer>
+</html>

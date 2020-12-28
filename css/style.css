@@ -1,0 +1,117 @@
+body{
+    background-color: gray;
+}
+
+h1, h3{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font: bolder;
+    color: antiquewhite;
+}
+
+p{
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    font: bolder;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+a{
+    text-align: center;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.6);
+}
+
+#boxA{
+    padding-left: 30px;
+}
+
+#topbar{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(13, 13, 85);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+#navbar{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    background-color: rgb(13, 13, 85);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    margin-top: 0.5em;
+    text-decoration: none;
+}
+
+#mainbar{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 20% auto auto;
+    height: 100%;
+    width: 100%;
+    margin-top: 0.5em;
+    font-size: medium;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+}
+
+#item{
+    font: bolder;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+#mar, #sig{
+    font-family: 'Courier New', Courier, monospace;
+    font: bolder;
+    margin-right: 5px;
+}
+
+#over{
+    margin-left: 15px;
+}
+
+#overbox{
+    font-family: 'Courier New', Courier, monospace;
+    font: bolder;
+}
+
+#buttons{
+    border: none;
+    background-color: rgb(10, 10, 107);
+    width: 202px;
+    height: 25px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font: bolder;
+    margin-right: 5px;
+}
+
+footer{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(13, 13, 85);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    margin-top: 0.5em;
+    font-size: medium;
+}
