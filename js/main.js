@@ -65,12 +65,12 @@ function calculateUSC(annualPay)
         }
         if(annualPay < 20687)
         {
-            usc = ((12012) * 0.5) + ((annualPay - 12012) * 0.02);
+            usc = ((12012 / 100) * 0.5) + ((annualPay - 12012) * 0.02);
             return usc;
         }
         if(annualPay > 20687)
         {
-            usc = ((12012) * 0.5) + ((annualPay - 12012) * 0.02);
+            usc = ((12012 / 100) * 0.5) + ((annualPay - 12012) * 0.02);
             return usc;
         }
     }
@@ -81,17 +81,17 @@ function calculateUSC(annualPay)
     }
     if(annualPay > 70044)
     {
-        usc = ((12012) * 0.5) + ((20687 - 12012) * 0.02) + ((70044 - 20687) * 0.045) + ((annualPay - 70044) * 0.08);
+        usc = ((12012 / 100) * 0.5) + ((20687 - 12012) * 0.02) + ((70044 - 20687) * 0.045) + ((annualPay - 70044) * 0.08);
         return usc;
     }
     if(annualPay < 70044 && annualPay > 20687)
     {
-        usc = ((12012) * 0.5) + ((20687 - 12012) * 0.02) + ((annualPay - 20687) * 0.045);
+        usc = ((12012 / 100) * 0.5) + ((20687 - 12012) * 0.02) + ((annualPay - 20687) * 0.045);
         return usc;
     }
     if(annualPay < 20687)
     {
-        usc = ((12012) * 0.5) + ((annualPay - 12012) * 0.02);
+        usc = ((12012 / 100) * 0.5) + ((annualPay - 12012) * 0.02);
         return usc;
     }
     return usc;
