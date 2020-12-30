@@ -30,7 +30,7 @@ function calculatePaye(annualPay)
         }
         if(annualPay > scop)
         {
-            tax = (scop * 0.4) + ((annualPay - scop) * 0.4) - tc;
+            tax = (scop * 0.2) + ((annualPay - scop) * 0.4) - tc;
             return tax;
         }
     }
@@ -46,7 +46,7 @@ function calculatePaye(annualPay)
         }
         if(annualPay > scop)
         {
-            tax = (scop * 0.4) + ((annualPay - scop) * 0.4) - tc;
+            tax = (scop * 0.2) + ((annualPay - scop) * 0.4) - tc;
             return tax;
         }
     }
