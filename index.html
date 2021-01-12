@@ -6,8 +6,8 @@
         <meta name="description" content="PAYE Calculator">
         <meta name="keywords" content="PAYE,PRSI,USC">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/main.js"></script>
-        <script src="js/time.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/time.js"></script>
     </head>
 
     <body>
@@ -48,6 +48,8 @@
                         <input type="text" id="usc" class="box" placeholder="USC..." /><label id="label">USC</label><br><br>
                         <input type="text" id="payable" class="box" placeholder="Total Payable..." /><label id="label">Total Payable</label><br><br>
                         <input type="text" id="net" class="box" placeholder="Net Salary..." /><label id="label">Net Salary</label><br><br>
+                        <input type="button" id="button" value="Submit" onclick="calculate()" />
+                        <input type="button" id="button" value="Clear" onclick="clear()" />
                     </form>
                 </div>
                 <div id="mainitem">
