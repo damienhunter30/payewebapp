@@ -29,7 +29,7 @@
                 <h3>PAYE Calculator</h3>
                 <p>
                     If you want to support my work, as I am unemployed and attending college, I would love any help at all
-                    and you can <a href="https://paypal.me/damienhunt9?locale.x=en_US" target="_blank">donate</a> if you'd like.
+                    and you can <a href="https://paypal.me/damienhunt9?locale.x=en_US" target="_blank">support my work</a> if you'd like.
                     Thank you for visiting. I've developed this application for PAYE workers in Ireland. The application
                     should provide a number of options for a user to choose from, depending on each individuals situation.
                 </p>
@@ -41,15 +41,15 @@
             </div>
             <div id="mainbody">
                 <div id="mainitem">
-                    <form>
+                    <form >
                         <input type="text" id="annual" class="box" placeholder="Annual Salary..." /><label id="label">Annual Salary</label><br><br>
                         <input type="text" id="paye" class="box" placeholder="PAYE..." /><label id="label">PAYE</label><br><br>
                         <input type="text" id="prsi" class="box" placeholder="PRSI..." /><label id="label">PRSI</label><br><br>
                         <input type="text" id="usc" class="box" placeholder="USC..." /><label id="label">USC</label><br><br>
                         <input type="text" id="payable" class="box" placeholder="Total Payable..." /><label id="label">Total Payable</label><br><br>
                         <input type="text" id="net" class="box" placeholder="Net Salary..." /><label id="label">Net Salary</label><br><br>
-                        <input type="button" id="button" value="Submit" onclick="calculate()" />
-                        <input type="button" id="button" value="Clear" onclick="clear()" />
+                        <input type="button" id="submit" class="button" value="Submit" onclick="calculate()" />
+                        <input type="reset" id="clear" class="button" value="Clear" />
                     </form>
                 </div>
                 <div id="mainitem">
