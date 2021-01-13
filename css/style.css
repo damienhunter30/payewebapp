@@ -54,7 +54,7 @@
     margin: 0.1em;
 }
 
-#label, #maritalLabel{    
+#label, #maritalLabel, #ageLabel{    
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
     padding-left: 20px;
@@ -117,8 +117,7 @@ footer{
     padding: 5px;
 }
 
-.button
-{
+.button{
     border: none;
     width: 150px;
     height: 25px;

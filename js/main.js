@@ -1,5 +1,7 @@
 function calculate()
 {
     annualVal = document.getElementById("annual").value;
-    window.alert(annualVal);
+    status = document.getElementById("marital").value;
+    ageStatus = document.getElementById("age").value;
+    window.alert(status + " " + ageStatus);
 }
