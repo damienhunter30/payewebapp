@@ -40,13 +40,16 @@ function calculateTax(annualVal){
             tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
         }
     }
-
     return tax;
 }
 
 function calculateUSC(annualVal){
     ageVal = document.getElementById("age").value;
 
-    // underAge, overAge
+    if(ageVal == "undgerAge"){
 
+    }
+    if(ageVal == "overAge"){
+
+    }
 }
