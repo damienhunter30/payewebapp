@@ -3,11 +3,11 @@ function calculate(){
     tax = calculateTax(annualVal);
     uscVal = calculateUSC(annualVal);
     document.getElementById("paye").value = "€" + tax;
+    document.getElementById("usc").value = "€" + uscVal;
 
     prsiVal = (annualVal / 100) * 4;
     document.getElementById("prsi").value = "€" + prsiVal;
-    document.getElementById("usc").value = "€" + uscVal;
-
+    
     payVal = tax + prsiVal + uscVal;
     document.getElementById("payable").value = "€" + payVal;
 
@@ -87,47 +87,47 @@ function calculateTax(annualVal){
 
 function calculateUSC(annualVal){
     ageVal = document.getElementById("age").value;
-    card = document.getElementById("card").value;
+    cardVal = document.getElementById("card").value;
 
     if(ageVal == "undgerAge"){
-        if(card == "yes"){
+        if(cardVal == "yes"){
             usc1 = (12012 / 100) * 0.5;
             usc2 = (annualVal - 12012) * 0.02;
-            usc = usc1 + usc2;
+            uscValue = usc1 + usc2;
         }
-        if(card == "no"){
+        if(cardVal == "no"){
             if(annualVal > 100000){
                 usc1 = (12012 / 100) * 0.5;
                 usc2 = (20687 - 12012) * 0.02;
                 usc3 = (70044 - 20687) * 0.045;
                 usc4 = (100000 - 70044) * 0.08;
                 usc5 = (annualVal - 100000) * 0.11;
-                usc = usc1 + usc2 + usc3 + usc4 + usc5;
+                uscValue = usc1 + usc2 + usc3 + usc4 + usc5;
             }
             if(annualVal > 70044 && annualVal < 100000){
                 usc1 = (12012 / 100) * 0.5;
                 usc2 = (20687 - 12012) * 0.02;
                 usc3 = (70044 - 20687) * 0.045;
                 usc4 = (annualVal - 70044) * 0.08;
-                usc = usc1 + usc2 + usc3 + usc4;
+                uscValue = usc1 + usc2 + usc3 + usc4;
             }
             if(annualVal > 20687 && annualVal < 70044){
                 usc1 = (12012 / 100) * 0.5;
                 usc2 = (20687 - 12012) * 0.02;
                 usc3 = (annualVal - 20687) * 0.045;
-                usc = usc1 + usc2 + usc3;
+                uscValue = usc1 + usc2 + usc3;
             }
             if(annualVal < 20687 && annualVal > 13000){
                 usc1 = (12012 / 100) * 0.5;
                 usc2 = (annualVal - 12012) * 0.02;
-                usc = usc1 + usc2;
+                uscValue = usc1 + usc2;
             }
         }
     }
     if(ageVal == "overAge"){
         usc1 = (12012 / 100) * 0.5;
         usc2 = (annualVal - 12012) * 0.02;
-        usc = usc1 + usc2;
+        uscValue = usc1 + usc2;
     }
-    return usc;
+    return uscValue;
 }
