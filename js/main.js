@@ -16,12 +16,7 @@ function calculate(){
 
 function calculateTax(annualVal){
     statusVal = document.getElementById("marital").value;
-
-    // Additional credit for certain widowed persons /surviving civil partner €1,650
-    // Earned income credit (increased)* €1,650
     // Home carer credit €1,600
-    
-    // One parent/widowed parent/surviving civil partner €39,300 Balance
 
     // home
     if(statusVal == "single"){
@@ -79,7 +74,39 @@ function calculateTax(annualVal){
             tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
         }
     }
+    if(statusVal == "homeS"){
+        scop = 35300;
+        tc = 4900;
 
+        if(annualVal < scop){
+            tax = (annualVal * 0.2) - tc;
+        }
+        if(annualVal > scop){
+            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        }
+    }
+    if(statusVal == "homeM"){
+        scop = 44300;
+        tc = 6550;
+
+        if(annualVal < scop){
+            tax = (annualVal * 0.2) - tc;
+        }
+        if(annualVal > scop){
+            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        }
+    }
+    if(statusVal == "homeMM"){
+        scop = 70600;
+        tc = 4900;
+
+        if(annualVal < scop){
+            tax = (annualVal * 0.2) - tc;
+        }
+        if(annualVal > scop){
+            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        }
+    }
     return tax;
 }
 
