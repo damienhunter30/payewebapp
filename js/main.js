@@ -86,7 +86,7 @@ function calculateTax(annualVal){
 
 function calculateUSC(annualVal){
     ageVal = document.getElementById("age").value;
-
+    card = document.getElementById("card").value;
     // 0.5% (unchanged) €0 to €12,012**
     // 2.0% (unchanged) €12,013 to €20,687***
     // 4.5% (unchanged) €20,688 to €70,044****
@@ -94,9 +94,24 @@ function calculateUSC(annualVal){
     // 11% (unchanged) > €100,000
 
     if(ageVal == "undgerAge"){
-
+        if(card == "yes"){
+            usc1 = (12012 / 100) * 0.5;
+            usc2 = (annualVal - 12012) * 0.02;
+            usc = usc1 + usc2;
+        }
+        if(card == "no"){
+            if(annualVal > 100000){
+                usc1 = (12012 / 100) * 0.5;
+                usc2 = (20687 - 12012) * 0.02;
+                usc3 = (70044 - 20687) * 0.045;
+                usc4 = (100000 - 70044) * 0.08;
+                usc5 = (annualVal - 100000) * 0.11;
+            }
+        }
     }
     if(ageVal == "overAge"){
-
+        usc1 = (12012 / 100) * 0.5;
+        usc2 = (annualVal - 12012) * 0.02;
+        usc = usc1 + usc2;
     }
 }
