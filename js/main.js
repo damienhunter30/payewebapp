@@ -1,16 +1,16 @@
 function calculate(){
     annualVal = document.getElementById("annual").value;
     prsiVal = (annualVal / 100) * 4;
-    document.getElementById("prsi").value = prsiVal;
+    document.getElementById("prsi").value = "€" + prsiVal;
 
     tax = calculateTax(annualVal);
-    document.getElementById("paye").value = tax;
+    document.getElementById("paye").value = "€" + tax;
     calculateUSC(annualVal);
 
     netVal = annualVal - prsiVal - tax;
     payVal = tax + prsiVal;
-    document.getElementById("payable").value = payVal;
-    document.getElementById("net").value = netVal;
+    document.getElementById("payable").value = "€" + payVal;
+    document.getElementById("net").value = "€" + netVal;
 }
 
 function calculateTax(annualVal){
