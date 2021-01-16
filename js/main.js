@@ -5,6 +5,7 @@ function calculate(){
 
     tax = calculateTax(annualVal);
     document.getElementById("paye").value = "€" + tax;
+    
     calculateUSC(annualVal);
 
     netVal = annualVal - prsiVal - tax;
@@ -22,7 +23,7 @@ function calculateTax(annualVal){
     
     // One parent/widowed parent/surviving civil partner €39,300 Balance
 
-    // widow, surviving, home
+    // home
     if(statusVal == "single"){
         scop = 35300;
         tc = 3300;
@@ -59,6 +60,17 @@ function calculateTax(annualVal){
     if(statusVal == "loneparent"){
         scop = 39300;
         tc = 3300;
+
+        if(annualVal < scop){
+            tax = (annualVal * 0.2) - tc;
+        }
+        if(annualVal > scop){
+            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        }
+    }
+    if(statusVal == "surviving" || statusVal == "widow"){
+        scop = 39300;
+        tc = 4950;
 
         if(annualVal < scop){
             tax = (annualVal * 0.2) - tc;
