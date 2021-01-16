@@ -5,7 +5,6 @@ function calculate(){
 
     tax = calculateTax(annualVal);
     document.getElementById("paye").value = tax;
-    window.alert(tax);
     calculateUSC(annualVal);
 
     netVal = annualVal - prsiVal - tax;
