@@ -122,11 +122,11 @@ function calculateUSC(annualVal){
                 usc = usc1 + usc2;
             }
         }
-        return usc;
     }
     if(ageVal == "overAge"){
         usc1 = (12012 / 100) * 0.5;
         usc2 = (annualVal - 12012) * 0.02;
         usc = usc1 + usc2;
     }
+    return usc;
 }
