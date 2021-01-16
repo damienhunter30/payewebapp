@@ -16,95 +16,69 @@ function calculate(){
 
 function calculateTax(annualVal){
     statusVal = document.getElementById("marital").value;
-    // Home carer credit €1,600
 
-    // home
     if(statusVal == "single"){
-        scop = 35300;
-        tc = 3300;
-
-        if(annualVal < scop){
-            tax = (annualVal * 0.2) - tc;
+        if(annualVal < 35300){
+            tax = (annualVal * 0.2) - 3300;
         }
-        if(annualVal > scop){
-            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        if(annualVal > 35300){
+            tax = (35300 * 0.2) + ((annualVal - 35300) * 0.4) - 3300;
         }
     }
     if(statusVal == "married1"){
-        scop = 44300;
-        tc = 4950;
-
-        if(annualVal < scop){
-            tax = (annualVal * 0.2) - tc;
+        if(annualVal < 44300){
+            tax = (annualVal * 0.2) - 4950;
         }
-        if(annualVal > scop){
-            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        if(annualVal > 44300){
+            tax = (44300 * 0.2) + ((annualVal - 44300) * 0.4) - 4950;
         }
     }
     if(statusVal == "married2"){
-        scop = 70600;
-        tc = 3300;
-
-        if(annualVal < scop){
-            tax = (annualVal * 0.2) - tc;
+        if(annualVal < 70600){
+            tax = (annualVal * 0.2) - 3300;
         }
-        if(annualVal > scop){
-            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        if(annualVal > 70600){
+            tax = (70600 * 0.2) + ((annualVal - 70600) * 0.4) - 3300;
         }
     }
     if(statusVal == "loneparent"){
-        scop = 39300;
-        tc = 3300;
-
-        if(annualVal < scop){
-            tax = (annualVal * 0.2) - tc;
+        if(annualVal < 39300){
+            tax = (annualVal * 0.2) - 3399;
         }
-        if(annualVal > scop){
-            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        if(annualVal > 39300){
+            tax = (39300 * 0.2) + ((annualVal - 39300) * 0.4) - 3300;
         }
     }
     if(statusVal == "surviving" || statusVal == "widow"){
-        scop = 39300;
-        tc = 4950;
-
-        if(annualVal < scop){
-            tax = (annualVal * 0.2) - tc;
+        if(annualVal < 39300){
+            tax = (annualVal * 0.2) - 4950;
         }
-        if(annualVal > scop){
-            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        if(annualVal > 39300){
+            tax = (39300 * 0.2) + ((annualVal - 39300) * 0.4) - 4950;
         }
     }
     if(statusVal == "homeS"){
-        scop = 35300;
-        tc = 4900;
-
-        if(annualVal < scop){
-            tax = (annualVal * 0.2) - tc;
+        if(annualVal < 35300){
+            tax = (annualVal * 0.2) - 4900;
         }
-        if(annualVal > scop){
-            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        if(annualVal > 35300){
+            tax = (35300 * 0.2) + ((annualVal - 35300) * 0.4) - 4900;
         }
     }
     if(statusVal == "homeM"){
-        scop = 44300;
-        tc = 6550;
-
-        if(annualVal < scop){
-            tax = (annualVal * 0.2) - tc;
+        if(annualVal < 44300){
+            tax = (annualVal * 0.2) - 6550;
         }
-        if(annualVal > scop){
-            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        if(annualVal > 44300){
+            tax = (44300 * 0.2) + ((annualVal - 44300) * 0.4) - 6550;
         }
     }
     if(statusVal == "homeMM"){
-        scop = 70600;
-        tc = 4900;
-
-        if(annualVal < scop){
-            tax = (annualVal * 0.2) - tc;
+        if(annualVal < 70600){
+            tax = (annualVal * 0.2) - 4900;
         }
-        if(annualVal > scop){
-            tax = (scop * 0.2) + ((annualVal - scop) * 0.4) - tc;
+        if(annualVal > 70600){
+            tax = (70600 * 0.2) + ((annualVal - 70600) * 0.4) - 4900;
         }
     }
     return tax;
