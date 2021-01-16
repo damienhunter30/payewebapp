@@ -87,6 +87,12 @@ function calculateTax(annualVal){
 function calculateUSC(annualVal){
     ageVal = document.getElementById("age").value;
 
+    // 0.5% (unchanged) €0 to €12,012**
+    // 2.0% (unchanged) €12,013 to €20,687***
+    // 4.5% (unchanged) €20,688 to €70,044****
+    // 8% (unchanged) €70,045 to €100,000
+    // 11% (unchanged) > €100,000
+
     if(ageVal == "undgerAge"){
 
     }

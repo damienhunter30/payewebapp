@@ -54,7 +54,7 @@
     margin: 0.1em;
 }
 
-#label, #maritalLabel, #ageLabel{    
+#label, #maritalLabel, #ageLabel, #cardLabel{    
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
     padding-left: 20px;
